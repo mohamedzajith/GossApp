@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="package1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/Untitled Folder 3/workshop/first-sms/lib/package/tap-api-1.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Untitled Folder 3/workshop/first-sms/lib/package/gson-1.7.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Untitled Folder 3/workshop/first-sms/lib/package/guava-18.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Untitled Folder 3/workshop/first-sms/lib/package/tap-ussd-manager-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

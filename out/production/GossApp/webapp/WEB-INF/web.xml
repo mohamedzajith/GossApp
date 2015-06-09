@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+<display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>smsMoReceiver</servlet-name>
+        <servlet-class>hms.tap.api.sms.MoSmsReceiver</servlet-class>
+        <init-param>
+            <param-name>smsReceiver</param-name>
+            <param-value>com.tap.app.SmsService</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>smsMoReceiver</servlet-name>
+        <url-pattern>/sms</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ussdReceiver</servlet-name>
+        <servlet-class>hms.tap.api.ussd.MoUssdReceiver</servlet-class>
+        <init-param>
+            <param-name>ussdReceiver</param-name>
+            <param-value>com.tap.app.UssdService</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ussdReceiver</servlet-name>
+        <url-pattern>/ussd</url-pattern>
+    </servlet-mapping>
+
+</web-app>
