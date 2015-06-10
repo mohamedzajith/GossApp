@@ -24,11 +24,13 @@ public class WelcomeMenu implements Menu{
         String language = moUssdReq.getMessage();
         if(language.equals("1")){
             session.getValueHolders().add(new ValueHolder("language", "Sinhala"));
+            return "category";
         } else if(language.equals("2")){
             session.getValueHolders().add(new ValueHolder("language", "Tamil"));
+            return "category";
         } else if(language.equals("3")){
             session.getValueHolders().add(new ValueHolder("language", "English"));
-        }
-        return "category";
+            return "category";
+        }else return "welcome";
     }
 }

@@ -12,11 +12,11 @@ import hms.tap.ussd.manager.menu.Menu;
 
 @Config(id="Subsciption")
 public class ConformationMenu implements Menu{
-    public DB dbconn = connection.conn();
-    public DBCollection coll = dbconn.getCollection("user");
+//    public DB dbconn = connection.conn();
+//    public DBCollection coll = dbconn.getCollection("user");
     @Override
     public String getMessage(Session session, MoUssdReq moUssdReq) {
-        return "Goss-App\nChoose Category\n 1. Conform\n"+session.getValueByKey("category");
+        return "Goss-App\nChoose Category\n 1. Conform\n";
     }
 
     @Override
