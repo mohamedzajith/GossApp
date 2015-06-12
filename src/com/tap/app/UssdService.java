@@ -23,7 +23,7 @@ public class UssdService implements MoUssdListener {
         try {
             ussdMessageProcessor = new UssdMessageProcessor.Builder().appConfig(new AppConfig.Builder().appId("APP_xxxxxx").password("xxxxxx").build()).
                     menus(Arrays.<Menu>asList(new WelcomeMenu(), new CategoryMenu(), new SportMenu(), new CinemaMenu()
-                            , new PoliticsMenu(), new ConformationMenu(), new SubscriptionMenu())).build();
+                            , new PoliticsMenu(), new ConformationMenu(), new SubscriptionMenu(),new MyProfile())).build();
         } catch (UssdInitializationException e) {
             e.printStackTrace();
         } catch (MultipleIndexMenuException e) {

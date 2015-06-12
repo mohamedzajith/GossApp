@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="package2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/package/gson-1.7.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/package/guava-18.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/package/tap-ussd-manager-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/package/mongo-java-driver-2.10.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/package/tap-api-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
