@@ -13,7 +13,7 @@ import hms.tap.ussd.manager.menu.Menu;
 public class PoliticsMenu implements Menu{
     @Override
     public String getMessage(Session session, MoUssdReq moUssdReq) {
-        return "Goss-App\nChoose Category\n 1. Local \n 2. Central ";
+        return "Choose your preference\n 1. Local \n 2. Central ";
     }
 
     @Override

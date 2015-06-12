@@ -19,7 +19,7 @@ public class ConformationMenu implements Menu{
 //    public DBCollection coll = dbconn.getCollection("user");
     @Override
     public String getMessage(Session session, MoUssdReq moUssdReq) {
-        return "Goss-App\nChoose Category\n 1. Conform\n";
+        return "You have chosen gossips under "+session.getValueByKey("category")+"\n 1. Conform\n";
     }
 
     @Override

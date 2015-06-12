@@ -14,7 +14,7 @@ import hms.tap.ussd.manager.menu.Menu;
 public class SportMenu implements Menu{
     @Override
     public String getMessage(Session session, MoUssdReq moUssdReq) {
-        return "Goss-App\nChoose Category\n 1. Local \n 2. International";
+        return "Choose your preference\n 1. Local \n 2. International";
     }
 
     @Override

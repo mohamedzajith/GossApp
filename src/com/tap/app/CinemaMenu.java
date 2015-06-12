@@ -13,7 +13,7 @@ import hms.tap.ussd.manager.menu.Menu;
 public class CinemaMenu implements Menu{
     @Override
     public String getMessage(Session session, MoUssdReq moUssdReq) {
-        return "Goss-App\nChoose Category\n 1. Hollywood \n 2. Bollywood \n 3. Kollywood ";
+        return "Choose your preference \n 1. Hollywood \n 2. Bollywood \n 3. Kollywood ";
     }
 
     @Override

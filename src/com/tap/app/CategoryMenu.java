@@ -14,7 +14,7 @@ import hms.tap.ussd.manager.menu.Menu;
 public class CategoryMenu implements Menu{
     @Override
     public String getMessage(Session session, MoUssdReq moUssdReq) {
-        return "Goss-App\nChoose Category\n 1. Cinema \n 2. Politics \n 3. Sports \n 4. My Profile";
+        return "Choose Category\n 1. Cinema \n 2. Politics \n 3. Sports \n 4. My Profile";
     }
 
     @Override
