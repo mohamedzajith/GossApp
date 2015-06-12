@@ -28,7 +28,6 @@ public class MyProfile implements Menu {
             String ci = obj.getString("cinema");
             String po = obj.getString("politics");
             String sp = obj.getString("sport");
-            System.out.println(ci);
             return "Dear user you have chosen \n Cinema\n " +ci + " \nPolitics\n" +po + "\nSports\n" + sp + "\n1. Add more \n2. Remove";
         }
         return "Dear user there is no Subscriptions";
