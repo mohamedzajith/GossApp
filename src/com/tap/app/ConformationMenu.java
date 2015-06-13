@@ -15,8 +15,8 @@ import java.util.Arrays;
 
 @Config(id="Subsciption")
 public class ConformationMenu implements Menu{
-//    public DB dbconn = connection.conn();
-//    public DBCollection coll = dbconn.getCollection("user");
+    public DB dbconn = connection.conn();
+    public DBCollection coll = dbconn.getCollection("user");
     @Override
     public String getMessage(Session session, MoUssdReq moUssdReq) {
         return "You have chosen gossips under "+session.getValueByKey("category")+"\n 1. Conform\n";
@@ -51,27 +51,7 @@ public class ConformationMenu implements Menu{
                     }else if (ls.equals(moUssdReq.getSourceAddress()) && sp.equals(session.getValueByKey("category"))){
                         WriteResult result = coll.update(new BasicDBObject("Phone_no",moUssdReq.getSourceAddress()),
                                 new BasicDBObject("$addToSet",new BasicDBObject(session.getValueByKey("category"), session.getValueByKey("sport"))));
-                    }/*else if (!ls.equals(moUssdReq.getSourceAddress())){
-                        if (session.getValueByKey("category")=="cinema"){
-                            BasicDBObject ins = new BasicDBObject("Phone_no",moUssdReq.getSourceAddress())
-                                    .append("language",session.getValueByKey("language"))
-                                    .append("subscriptin","true")
-                                    .append(session.getValueByKey("category"), Arrays.asList(session.getValueByKey("cinema")));
-                            WriteResult result = coll.insert(ins);
-                        }else if (session.getValueByKey("category")=="politics"){
-                            BasicDBObject ins = new BasicDBObject("Phone_no",moUssdReq.getSourceAddress())
-                                    .append("language",session.getValueByKey("language"))
-                                    .append("subscriptin","true")
-                                    .append(session.getValueByKey("category"), Arrays.asList(session.getValueByKey("politics")));
-                            WriteResult result = coll.insert(ins);
-                        }else if (session.getValueByKey("category")=="sport"){
-                            BasicDBObject ins = new BasicDBObject("Phone_no",moUssdReq.getSourceAddress())
-                                    .append("language",session.getValueByKey("language"))
-                                    .append("subscriptin","true")
-                                    .append(session.getValueByKey("category"), Arrays.asList(session.getValueByKey("sport")));
-                            WriteResult result = coll.insert(ins);
-                        }
-                    }*/
+                    }
                 }
 
 

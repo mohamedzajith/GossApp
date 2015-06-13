@@ -14,8 +14,8 @@ import hms.tap.ussd.manager.menu.Menu;
  * Created by dba on 6/12/15.
  */
 
-@Config(id="Myprofile")
-public class MyProfile implements Menu {
+@Config(id="Remove")
+public class Remove implements Menu {
     @Override
     public String getMessage(Session session, MoUssdReq moUssdReq) {
         DB dbconn = connection.conn();
@@ -26,10 +26,7 @@ public class MyProfile implements Menu {
         DBCursor cursor = coll.find(query);
         while (cursor.hasNext()) {
             BasicDBObject obj = (BasicDBObject) cursor.next();
-            String ci = obj.getString("cinema");
-            String po = obj.getString("politics");
-            String sp = obj.getString("sport");
-            return "Dear user you have chosen \n Cinema\n " +ci + " \nPolitics\n" +po + "\nSports\n" + sp + "\n1. Add more \n2. Remove";
+            return "Dear user you have chosen \n1. Cinema\n2. Politics\n3. Sports\n";
         }
         return "Dear user there is no Subscriptions";
     }
@@ -38,10 +35,10 @@ public class MyProfile implements Menu {
     public String getNextMenu(Session session, MoUssdReq moUssdReq) {
         String category = moUssdReq.getMessage();
         if(category.equals("1")){
-            session.getValueHolders().add(new ValueHolder("Myprofile", "addmore"));
+            session.getValueHolders().add(new ValueHolder("Myprofile", "cinema"));
             return "Addmore";
         } else if(category.equals("2")){
-            session.getValueHolders().add(new ValueHolder("Myprofile", "remove"));
+            session.getValueHolders().add(new ValueHolder("Myprofile", "politics"));
             return "Remove";
         } else return "Myprofile";
     }

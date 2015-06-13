@@ -21,9 +21,9 @@ public class UssdService implements MoUssdListener {
 
     public UssdService() {
         try {
-            ussdMessageProcessor = new UssdMessageProcessor.Builder().appConfig(new AppConfig.Builder().appId("APP_xxxxxx").password("xxxxxx").build()).
+            ussdMessageProcessor = new UssdMessageProcessor.Builder().appConfig(new AppConfig.Builder().appId("APP_013175").password("10cb14450cebb747926d11d90fe23633").build()).
                     menus(Arrays.<Menu>asList(new WelcomeMenu(), new CategoryMenu(), new SportMenu(), new CinemaMenu()
-                            , new PoliticsMenu(), new ConformationMenu(), new SubscriptionMenu(),new MyProfile())).build();
+                            , new PoliticsMenu(), new ConformationMenu(), new SubscriptionMenu(),new MyProfile(),new Addmore(),new Remove())).build();
         } catch (UssdInitializationException e) {
             e.printStackTrace();
         } catch (MultipleIndexMenuException e) {
